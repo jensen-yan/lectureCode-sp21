@@ -1,3 +1,5 @@
+package my_lecture_code.lec4_lists1;
+
 public class IntList {
     public int first;
     public IntList rest;
