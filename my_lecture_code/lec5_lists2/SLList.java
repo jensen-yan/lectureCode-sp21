@@ -16,6 +16,12 @@ public class SLList {
         }
     }
 
+    /** create an empty list */
+    public SLList(){
+        first = null;
+        size = 0;
+    }
+
     public SLList(int x){
         first = new IntNode(x, null);
         size = 1;
@@ -34,6 +40,12 @@ public class SLList {
     /** adds an item to the end of last */
     public void addLast(int x){
         size += 1;
+
+        if(first == null){
+            first = new IntNode(x, null);
+            return;
+        }
+        
         IntNode p = first;
         while (p.next != null) {    // scan to the end
             p = p.next;
@@ -42,9 +54,9 @@ public class SLList {
     }
 
     public static void main(String[] args) {
-        SLList L = new SLList(15);
-        L.addFirst(10);
-        L.addFirst(5);
+        SLList L = new SLList();
+        // L.addFirst(10);
+        // L.addFirst(5);
         L.addLast(20);
         System.out.println(L.getFirst());
         System.out.println(L.size);
