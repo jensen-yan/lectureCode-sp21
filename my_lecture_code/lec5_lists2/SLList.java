@@ -1,4 +1,3 @@
-package my_lecture_code.lec5_lists2;
 
 /** An SLList is a list of integers, contains IntNode */
 public class SLList {
