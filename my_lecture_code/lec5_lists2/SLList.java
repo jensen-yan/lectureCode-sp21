@@ -4,6 +4,17 @@ package my_lecture_code.lec5_lists2;
 public class SLList {
     private IntNode first;  // 防止被访问修改
 
+    // IntNode 不会使用外部类， 可以static， 节省一点内存
+    private static class IntNode {  // nested class 嵌套类
+        public int item;
+        public IntNode next;
+    
+        public IntNode(int i, IntNode n) {
+            item = i;
+            next = n;
+        }
+    }
+
     public SLList(int x){
         first = new IntNode(x, null);
     }
